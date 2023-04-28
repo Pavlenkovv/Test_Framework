@@ -13,8 +13,6 @@ def user():
     yield User()
 
 
-
-
 def test_remove_name(user):
     user.name = ''
     assert user.name == ''
