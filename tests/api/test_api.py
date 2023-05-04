@@ -1,20 +1,5 @@
-import pytest
-
-
 def test_check_math():
     assert 7 * 7 == 49
-
-
-class User:
-
-    def __init__(self) -> None:
-        self.name = "Sergii"
-        self.second_name = "Butenko"
-
-
-@pytest.fixture
-def user():
-    yield User()
 
 
 def test_remove_name(user):
