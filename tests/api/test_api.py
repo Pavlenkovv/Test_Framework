@@ -1,6 +1,10 @@
 import pytest
 
 
+def test_check_math():
+    assert 7 * 7 == 49
+
+
 class User:
 
     def __init__(self) -> None:
