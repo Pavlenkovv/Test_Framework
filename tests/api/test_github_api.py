@@ -9,5 +9,25 @@ def test_user_exists(github_api):
 
 @pytest.mark.api
 def test_user_not_exists(github_api):
-    r = github_api.get_user('defunkt39485')
+    r = github_api.get_user('defunkt_non_exists')
     assert r['message'] == 'Not Found'
+
+
+@pytest.mark.api
+def test_repo_can_be_found(github_api):
+    r = github_api.search_repo('become-qa-auto')
+    # print(r)
+    assert r['total_count'] == 39
+    assert 'become-qa-auto' in r['items'][0]['name']
+
+
+@pytest.mark.api
+def test_repo_cannot_be_found(github_api):
+    r = github_api.search_repo('Viacheslav_Pavlenko_repo_non_exists')
+    assert r['total_count'] == 0
+
+
+@pytest.mark.api
+def test_repo_with_single_char_be_found(github_api):
+    r = github_api.search_repo('s')
+    assert r['total_count'] == 0
