@@ -1,4 +1,4 @@
-from tests.ui import SignInPage
+from modules.ui.page_objects.sign_in_page import SignInPage
 import pytest
 
 

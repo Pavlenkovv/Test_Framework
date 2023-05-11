@@ -18,9 +18,3 @@ class SignInPage(BasePage):
         pass_elem.send_keys(password)
         btn_elem = self.driver.find_element(By.NAME, "commit")
         btn_elem.click()
-
-    def check_title(self, expected_title):
-        return self.driver.title == expected_title
-
-
-
