@@ -18,3 +18,9 @@ class SignInPage(BasePage):
         pass_elem.send_keys(password)
         btn_elem = self.driver.find_element(By.NAME, "commit")
         btn_elem.click()
+
+    def click_forgot_password_link(self):
+        forgot_password = self.driver.find_element(
+            By.LINK_TEXT, "Forgot password?"
+        )
+        forgot_password.click()
