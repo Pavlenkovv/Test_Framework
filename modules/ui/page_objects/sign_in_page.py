@@ -21,6 +21,6 @@ class SignInPage(BasePage):
 
     def click_forgot_password_link(self):
         forgot_password = self.driver.find_element(
-            By.LINK_TEXT, "Forgot password?"
+            By.CSS_SELECTOR, ".label-link.position-absolute.top-0.right-0"
         )
         forgot_password.click()
