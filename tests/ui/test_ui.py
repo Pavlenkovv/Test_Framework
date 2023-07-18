@@ -9,7 +9,7 @@ from selenium.webdriver.common.by import By
 def test_check_incorrect_name():
     driver = webdriver.Chrome(
         service=Service(
-            r"C:\Users\Shadow\Desktop\python_basics\14.2_Tets_framework\\"
+            r"C:\Users\Shadow\Desktop\python_basics\14.2_Test_framework\\"
             + "chromedriver.exe"))
     driver.get("https://github.com/login")
 
